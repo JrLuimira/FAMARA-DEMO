@@ -10,7 +10,7 @@
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="author" content="TemplatesJungle">
   <meta name="keywords" content="ecommerce,fashion,store">
-  <meta name="description" content="FAMARA">
+  <meta name="description" content="Bootstrap 5 Fashion Store HTML CSS Template">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="css/vendor.css">
@@ -24,10 +24,14 @@
     rel="stylesheet">
 </head>
 
+
+<script src="js/carrito.js"></script>
+<script src="js/marquee.js"></script>
+
 <body class="homepage">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
     <defs>
-      <symbol xmlns="https://www.instagram.com/famara.ec_?stkn=eTA5N3lkZGkwNmdz" id="instagram" viewBox="0 0 15 15">
+      <symbol xmlns="http://www.w3.org/2000/svg" id="instagram" viewBox="0 0 15 15">
         <path fill="none" stroke="currentColor"
           d="M11 3.5h1M4.5.5h6a4 4 0 0 1 4 4v6a4 4 0 0 1-4 4h-6a4 4 0 0 1-4-4v-6a4 4 0 0 1 4-4Zm3 10a3 3 0 1 1 0-6a3 3 0 0 1 0 6Z" />
       </symbol>
@@ -43,8 +47,14 @@
         <path fill="none" stroke="currentColor"
           d="m4.5 13.5l3-7m-3.236 3a2.989 2.989 0 0 1-.764-2V7A3.5 3.5 0 0 1 7 3.5h1A3.5 3.5 0 0 1 11.5 7v.5a3 3 0 0 1-3 3a2.081 2.081 0 0 1-1.974-1.423L6.5 9m1 5.5a7 7 0 1 1 0-14a7 7 0 0 1 0 14Z" />
       </symbol>
-     
-     
+      <symbol xmlns="http://www.w3.org/2000/svg" id="youtube" viewBox="0 0 15 15">
+        <path fill="currentColor"
+          d="m1.61 12.738l-.104.489l.105-.489Zm11.78 0l.104.489l-.105-.489Zm0-10.476l.104-.489l-.105.489Zm-11.78 0l.106.489l-.105-.489ZM6.5 5.5l.277-.416A.5.5 0 0 0 6 5.5h.5Zm0 4H6a.5.5 0 0 0 .777.416L6.5 9.5Zm3-2l.277.416a.5.5 0 0 0 0-.832L9.5 7.5ZM0 3.636v7.728h1V3.636H0Zm15 7.728V3.636h-1v7.728h1ZM1.506 13.227c3.951.847 8.037.847 11.988 0l-.21-.978a27.605 27.605 0 0 1-11.568 0l-.21.978ZM13.494 1.773a28.606 28.606 0 0 0-11.988 0l.21.978a27.607 27.607 0 0 1 11.568 0l.21-.978ZM15 3.636c0-.898-.628-1.675-1.506-1.863l-.21.978c.418.09.716.458.716.885h1Zm-1 7.728a.905.905 0 0 1-.716.885l.21.978A1.905 1.905 0 0 0 15 11.364h-1Zm-14 0c0 .898.628 1.675 1.506 1.863l.21-.978A.905.905 0 0 1 1 11.364H0Zm1-7.728c0-.427.298-.796.716-.885l-.21-.978A1.905 1.905 0 0 0 0 3.636h1ZM6 5.5v4h1v-4H6Zm.777 4.416l3-2l-.554-.832l-3 2l.554.832Zm3-2.832l-3-2l-.554.832l3 2l.554-.832Z" />
+      </symbol>
+      <symbol xmlns="http://www.w3.org/2000/svg" id="dribble" viewBox="0 0 15 15">
+        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+          d="M4.839 1.024c3.346 4.041 5.096 7.922 5.704 12.782M.533 6.82c5.985-.138 9.402-1.083 11.97-4.216M2.7 12.594c3.221-4.902 7.171-5.65 11.755-4.293M14.5 7.5a7 7 0 1 0-14 0a7 7 0 0 0 14 0Z" />
+      </symbol>
       <symbol xmlns="http://www.w3.org/2000/svg" id="calendar" viewBox="0 0 24 24">
         <g fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2">
           <rect width="20" height="18" x="2" y="4" rx="4" />
@@ -188,59 +198,60 @@
     </div>
   </div>
 
-  <div class="offcanvas offcanvas-end" data-bs-scroll="true" tabindex="-1" id="offcanvasCart" aria-labelledby="My Cart">
-    <div class="offcanvas-header justify-content-center">
-      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasCart" aria-labelledby="cartTitle">
+
+    <div class="offcanvas-header">
+
+      <h4 class="offcanvas-title" id="cartTitle">
+        Mi carrito
+      </h4>
+
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Cerrar">
+      </button>
+
     </div>
+
     <div class="offcanvas-body">
-      <div class="order-md-last">
-        <h4 class="d-flex justify-content-between align-items-center mb-3">
-          <span class="text-primary">Your cart</span>
-          <span class="badge bg-primary rounded-pill">3</span>
-        </h4>
-        <ul class="list-group mb-3">
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Growers cider</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$12</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Fresh grapes</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$8</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between lh-sm">
-            <div>
-              <h6 class="my-0">Heinz tomato ketchup</h6>
-              <small class="text-body-secondary">Brief description</small>
-            </div>
-            <span class="text-body-secondary">$5</span>
-          </li>
-          <li class="list-group-item d-flex justify-content-between">
-            <span>Total (USD)</span>
-            <strong>$20</strong>
-          </li>
-        </ul>
 
-        <button class="w-100 btn btn-primary btn-lg" type="submit">Continue to Checkout</button>
+      <p id="cartEmpty">
+        Tu carrito está vacío.
+      </p>
+
+      <!-- Aquí aparecerán los productos -->
+      <ul id="cartItems" class="list-group list-group-flush mb-4">
+      </ul>
+
+      <hr>
+
+      <!-- Total -->
+      <div class="d-flex justify-content-between align-items-center">
+
+        <h5>Total:</h5>
+
+        <strong id="cartTotal" class="fs-4">
+          $0.00
+        </strong>
+
       </div>
-    </div>
-  </div>
 
+      <button type="button" class="btn btn-dark w-100 mt-4" data-bs-dismiss="offcanvas">
+
+        Continuar comprando
+
+      </button>
+
+    </div>
+
+  </div>
   <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
     <div class="container-fluid">
       <div class="row justify-content-between align-items-center w-100">
 
-        <div class="col-auto">
+        <!-- <div class="col-auto">
           <a class="navbar-brand text-white" href="index.html">
-          <!-- Aquí colocas la ruta hacia tu nueva imagen -->
-          <img src="images/logo_famara.png" alt="Logo" width="50" height="auto">
+            <img src="images/famara-logo.png" alt="FAMARA" class="logo-header">
           </a>
-        </div>
+        </div> -->
 
         <div class="col-auto">
           <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -258,126 +269,13 @@
 
             <div class="offcanvas-body">
               <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle active" href="#" id="dropdownHome" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Todas las prendas</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownHome">
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Home Layout 1</a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Home Layout 2 </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Home Layout 3 </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Home Layout 4 </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownShop" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Nosotros</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownShop">
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Sidebar </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Three Column </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Three Column Wide </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Four Column </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Four Column Wide </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Six Column </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Shop Six Column Wide </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Single Product </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Single Product V2 </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownBlog" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Contactos</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownBlog">
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Blog Classic </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Blog Grid with Sidebar </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Blog Grid Four Column </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Blog No Sidebar </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Blog Right Sidebar </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Single Post </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Single Post No Sidebar </a>
-                    </li>
-                  </ul>
-                </li>
-                <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" href="#" id="dropdownPages" data-bs-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">Best Seller</a>
-                  <ul class="dropdown-menu list-unstyled" aria-labelledby="dropdownPages">
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">About </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Cart </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Checkout </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Coming Soon </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Contact </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Error Page </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">FAQs </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">My Account </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Order Tracking </a>
-                    </li>
-                    <li>
-                      <a href="index.html" class="dropdown-item item-anchor">Wishlist </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- <li class="nav-item">
-                  <a class="nav-link" href="#">Blog</a>
-                </li>
+
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Contact</a> -->
+                  <a class="nav-link mayorista-link" href="https://tr.ee/8D0OaJ01xH">
+                    ¡Conviértete en mayorista!
+                  </a>
                 </li>
+
               </ul>
             </div>
           </div>
@@ -390,8 +288,8 @@
               </a>
             </li>
             <li class="d-none d-lg-block">
-              <a href="index.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                aria-controls="offcanvasCart">Carro <span class="cart-count">(0)</span>
+              <a href="index.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">Carrio <span class="cart-count">(0)</span>
               </a>
             </li>
             <li class="d-lg-none">
@@ -426,137 +324,57 @@
 
   <section id="billboard" class="bg-light py-5">
     <div class="container">
-      <div class="row justify-content-center" >
-        <h1 class="section-title text-center mt-4" data-aos="fade-up" style="color: #8856e6;">FAMARA </h1>
-        <div class="col-md-6 text-center" data-aos="fade-up"  data-aos-delay="300">
-          <p>Vistete como toda una diva</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="swiper main-swiper py-4" data-aos="fade-up" data-aos-delay="600">
-          <div class="swiper-wrapper d-flex border-animation-left">
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model1.jpeg" alt="product"  class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Gabriela</a>
-                  </h5>
-                  <p>Ideal para momentos especiales.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible para ti</a>
-                  </div>
-                </div>
+      <div class="row justify-content-center">
+        <h1 class="section-title text-center mt-4" data-aos="fade-up">F A M A R A</h1>
+        <nav class="secondary-navbar">
+          <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="pages/catalogo.html">Catalogo</a></li>
+            <li><a href="pages/interes.html">Best Seller</a></li>
+          </ul>
+        </nav>
+
+        <!-- Carrusel de noticias: una noticia a la vez -->
+        <div class="news-carousel" data-autoplay-ms="8000" aria-label="Noticias destacadas">
+          <div class="news-track">
+            <a href="noticia1.html" class="news-slide">
+              <img src="imagen1.jpg" alt="Noticia 1">
+              <div class="news-overlay">
+                <h2>Noticia 1</h2>
+                <p>Descripción breve de la noticia.</p>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model2.png" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Milena</a>
-                  </h5>
-                  <p>Unico como tu.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible para ti</a>
-                  </div>
-                </div>
+            </a>
+            <a href="noticia2.html" class="news-slide">
+              <img src="imagen2.jpg" alt="Noticia 2">
+              <div class="news-overlay">
+                <h2>Noticia 2</h2>
+                <p>Descripción breve de la noticia.</p>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model1.png" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Anahy</a>
-                  </h5>
-                  <p>Para tu espiritu indomable.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible en stock</a>
-                  </div>
-                </div>
+            </a>
+            <a href="noticia3.html" class="news-slide">
+              <img src="imagen3.jpg" alt="Noticia 3">
+              <div class="news-overlay">
+                <h2>Noticia 3</h2>
+                <p>Descripción breve de la noticia.</p>
               </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model02.jpeg" alt="product"  class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Jimmato</a>
-                  </h5>
-                  <p>Bella como la primavera.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible en todas las tallas</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model07.jpeg" alt="product" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Mantilla</a>
-                  </h5>
-                  <p>Un toque juvenil a tu vida.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible en todas las tallas</a>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="swiper-slide">
-              <div class="banner-item image-zoom-effect">
-                <div class="image-holder">
-                  <a href="#">
-                    <img src="images/model01.jpeg" alt="product" style="max-width: 500px; height: 500px;" class="img-fluid">
-                  </a>
-                </div>
-                <div class="banner-content py-4">
-                  <h5 class="element-title text-uppercase">
-                    <a href="index.html" class="item-anchor">Vestido Pasiche</a>
-                  </h5>
-                  <p>Sientete diferente.</p>
-                  <div class="btn-left">
-                    <a href="#" class="btn-link fs-6 text-uppercase item-anchor text-decoration-none">Disponible en todas las tallas</a>
-                  </div>
-                </div>
-              </div>
-            </div>
+            </a>
           </div>
-          <div class="swiper-pagination"></div>
+
+          <!-- Puntos fijos: no forman parte de news-track -->
+          <div class="news-dots" role="group" aria-label="Elegir noticia">
+            <button class="news-dot active" type="button" data-news-index="0" aria-label="Mostrar noticia 1"
+              aria-pressed="true"></button>
+            <button class="news-dot" type="button" data-news-index="1" aria-label="Mostrar noticia 2"
+              aria-pressed="false"></button>
+            <button class="news-dot" type="button" data-news-index="2" aria-label="Mostrar noticia 3"
+              aria-pressed="false"></button>
+          </div>
         </div>
-        <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewBox="0 0 24 24">
-            <use xlink:href="#arrow-left"></use>
-          </svg></div>
-        <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewBox="0 0 24 24">
-            <use xlink:href="#arrow-right"></use>
-          </svg></div>
       </div>
     </div>
   </section>
 
-  <section class="features py-5">
+  <!-- <section class="features py-5">
     <div class="container">
       <div class="row">
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
@@ -564,8 +382,8 @@
             <svg width="38" height="38" viewBox="0 0 24 24">
               <use xlink:href="#calendar"></use>
             </svg>
-            <h4 class="element-title text-capitalize my-3">No sabes que te encaja?</h4>
-            <p>Una asesora te atendera inmediatamente.</p>
+            <h4 class="element-title text-capitalize my-3">Book An Appointment</h4>
+            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
           </div>
         </div>
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
@@ -573,8 +391,8 @@
             <svg width="38" height="38" viewBox="0 0 24 24">
               <use xlink:href="#shopping-bag"></use>
             </svg>
-            <h4 class="element-title text-capitalize my-3">Compra con seguridad</h4>
-            <p>Ventas en tienda y en linea.</p>
+            <h4 class="element-title text-capitalize my-3">Pick up in store</h4>
+            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
           </div>
         </div>
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
@@ -582,8 +400,8 @@
             <svg width="38" height="38" viewBox="0 0 24 24">
               <use xlink:href="#gift"></use>
             </svg>
-            <h4 class="element-title text-capitalize my-3">Manejo cuidadoso</h4>
-            <p>Nunca te llegara estropeado tu pedido.</p>
+            <h4 class="element-title text-capitalize my-3">Special packaging</h4>
+            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
           </div>
         </div>
         <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="900">
@@ -591,15 +409,15 @@
             <svg width="38" height="38" viewBox="0 0 24 24">
               <use xlink:href="#arrow-cycle"></use>
             </svg>
-            <h4 class="element-title text-capitalize my-3">Garantia de retorno</h4>
-            <p>Si no te convencio, o no te quedo. Puedes venir por garantia.</p>
+            <h4 class="element-title text-capitalize my-3">free global returns</h4>
+            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
-  <!-- <section class="categories overflow-hidden">
+  <!-- <section class="categories overflow-hidden" aria-label="Best Seller">
     <div class="container">
       <div class="open-up" data-aos="zoom-out">
         <div class="row">
@@ -650,562 +468,518 @@
     </div>
   </section> -->
 
-  <section id="new-arrival" class="new-arrival product-carousel py-5 position-relative overflow-hidden">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">Nuevos productos</h4>
-        <a href="index.html" class="btn-link">Ver todos los productos</a>
-      </div>
-      <div class="swiper product-swiper open-up" data-aos="zoom-out">
-        <div class="swiper-wrapper d-flex">
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="images/blusas.png" alt="categories" style="width: 100%; height: 450px; object-fit: cover;">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="element-title text-uppercase fs-5 mt-3">
-                    <a href="index.html">Blusas</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Disponibles</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="images/tops.png" alt="categories" style="width: 100%; height: 450px; object-fit: cover;">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Tops</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Disponibles</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="images/corsets.png" alt="categories" style="width: 100%; height: 450px; object-fit: cover;">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Corsets</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Disponibles</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="images/jeans.png" alt="categories" style="width: 100%; height: 450px; object-fit: cover;">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Jeans</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Disponibles</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder position-relative">
-                <a href="index.html">
-                  <img src="images/product-item-10.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Jumpers</a>
-                  </h5>
-                  <a href="#" class="text-decoration-none" data-after="Add to cart"><span>Disponibles</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewBox="0 0 24 24">
-          <use xlink:href="#arrow-left"></use>
-        </svg></div>
-      <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewBox="0 0 24 24">
-          <use xlink:href="#arrow-right"></use>
-        </svg></div>
-    </div>
-  </section>
-
-  <section class="collection bg-light position-relative py-5">
-    <div class="container">
-      <div class="row">
-        <div class="title-xlarge text-uppercase txt-fx domino">Collection</div>
-        <div class="collection-item d-flex flex-wrap my-5">
-          <div class="col-md-6 column-container">
-            <div class="image-holder">
-              <img src="images/classic-dress.png" alt="collection" style="width: 400px; height: auto">
-            </div>
-          </div>
-          <div class="col-md-6 column-container bg-white">
-            <div class="collection-content p-5 m-0 m-md-5">
-              <h3 class="element-title text-uppercase">Vestidos Clasicos</h3>
-              <p>Dignissim lacus, turpis ut suspendisse vel tellus. Turpis purus, gravida orci, fringilla a. Ac sed eu
-                fringilla odio mi. Consequat pharetra at magna imperdiet cursus ac faucibus sit libero. Ultricies quam
-                nunc, lorem sit lorem urna, pretium aliquam ut. In vel, quis donec dolor id in. Pulvinar commodo mollis
-                diam sed facilisis at cursus imperdiet cursus ac faucibus sit faucibus sit libero.</p>
-              <a href="#" class="btn btn-dark text-uppercase mt-3">Shop Collection</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
   <section id="best-sellers" class="best-sellers product-carousel py-5 position-relative overflow-hidden">
+
     <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">Best Selling Items</h4>
-        <a href="index.html" class="btn-link">View All Products</a>
+
+      <!-- TÍTULO -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h4 class="text-uppercase">
+          BEST SELLERS
+        </h4>
+
+        <a href="pages/catalogo.html" class="btn-link">
+          Ver todos
+        </a>
+
       </div>
-      <div class="swiper product-swiper open-up" data-aos="zoom-out">
-        <div class="swiper-wrapper d-flex">
+
+      <!-- CARRUSEL -->
+      <div class="swiper product-swiper">
+
+        <div class="swiper-wrapper">
+
+          <!-- PRODUCTO 1 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-4.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Dark florish onepiece</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$95.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-4.jpg" alt="Vestido floral">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Vestido floral</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$95.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-1" data-name="Vestido floral"
+                  data-price="95">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
+          <!-- PRODUCTO 2 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-3.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Baggy Shirt</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$55.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-3.jpg" alt="Camisa holgada">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Camisa holgada</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$55.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-2" data-name="Camisa holgada"
+                  data-price="55">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
+          <!-- PRODUCTO 3 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-5.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Cotton off-white shirt</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$65.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-5.jpg" alt="Camisa marfil">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Camisa marfil</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$65.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-3" data-name="Camisa marfil"
+                  data-price="65">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
+          <!-- PRODUCTO 4 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-6.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Handmade crop sweater</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$50.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-6.jpg" alt="Suéter tejido">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Suéter tejido</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$50.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-4" data-name="Suéter tejido"
+                  data-price="50">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
+          <!-- PRODUCTO 5 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-9.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Dark florish onepiece</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-9.jpg" alt="Vestido floral 2">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Vestido floral 2</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$70.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-5" data-name="Vestido floral 2"
+                  data-price="70">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
+          <!-- PRODUCTO 6 -->
           <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-10.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Cotton off-white shirt</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-10.jpg" alt="Camisa marfil 2">
+              </a>
+
+              <div class="best-product-info">
+                <h5>Camisa marfil 2</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$70.00</strong>
                 </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-6" data-name="Camisa marfil 2"
+                  data-price="70">
+                  Agregar al carrito
+                </button>
               </div>
-            </div>
+
+            </article>
           </div>
+
         </div>
+
         <div class="swiper-pagination"></div>
+
       </div>
-      <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewBox="0 0 24 24">
+
+      <!-- FLECHA IZQUIERDA -->
+      <button type="button" class="icon-arrow icon-arrow-left" aria-label="Producto anterior">
+
+        <svg width="35" height="35" viewBox="0 0 24 24">
           <use xlink:href="#arrow-left"></use>
-        </svg></div>
-      <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewBox="0 0 24 24">
+        </svg>
+
+      </button>
+
+      <!-- FLECHA DERECHA -->
+      <button type="button" class="icon-arrow icon-arrow-right" aria-label="Siguiente producto">
+
+        <svg width="35" height="35" viewBox="0 0 24 24">
           <use xlink:href="#arrow-right"></use>
-        </svg></div>
+        </svg>
+
+      </button>
+
     </div>
+
   </section>
 
-  <section class="video py-5 overflow-hidden">
+  <!-- BANNER HORIZONTAL DESLIZANTE -->
+
+  <!-- BANNER DESLIZANTE -->
+
+  <div class="famara-marquee">
+
+    <div class="famara-marquee-track">
+
+      <div class="famara-marquee-group">
+
+        <!-- FRASE 1 -->
+        <a href="pages/catalogo.html" class="famara-marquee-link">
+          COMPRA AHORA!
+        </a>
+
+        <!-- FRASE 2 -->
+        <a href="pages/novedades.html" class="famara-marquee-link">
+          ENVIOS A TODO EL ECUADOR!
+        </a>
+
+        <!-- FRASE 3 -->
+        <a href="pages/ofertas.html" class="famara-marquee-link">
+          PRODUCTOS EN OFERTA NO APLICA CAMBIOS
+        </a>
+
+        <!-- FRASE 4 -->
+        <a href="pages/interes.html" class="famara-marquee-link">
+          CONOCE NUESTROS BEST SELLERS
+        </a>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <section id="new-arrival" class="new-arrival best-sellers product-carousel py-5 position-relative overflow-hidden">
+
+    <div class="container">
+
+      <!-- TÍTULO -->
+      <div class="d-flex justify-content-between align-items-center mb-4">
+
+        <h4 class="text-uppercase">
+          OUR NEW ARRIVALS
+        </h4>
+
+        <a href="pages/catalogo.html" class="btn-link">
+          Ver todos
+        </a>
+
+      </div>
+
+      <!-- CARRUSEL -->
+      <div class="swiper product-swiper">
+
+        <div class="swiper-wrapper">
+
+          <!-- PRODUCTO 1 -->
+          <div class="swiper-slide">
+
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-1.jpg" alt="Vestido floral">
+              </a>
+
+              <div class="best-product-info">
+
+                <h5>Vestido floral</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$95.00</strong>
+                </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-7" data-name="Vestido floral"
+                  data-price="95">
+
+                  Agregar al carrito
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- PRODUCTO 2 -->
+          <div class="swiper-slide">
+
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-2.jpg" alt="Camisa holgada">
+              </a>
+
+              <div class="best-product-info">
+
+                <h5>Camisa holgada</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$55.00</strong>
+                </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-8" data-name="Camisa holgada"
+                  data-price="55">
+
+                  Agregar al carrito
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- PRODUCTO 3 -->
+          <div class="swiper-slide">
+
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-3.jpg" alt="Camisa marfil">
+              </a>
+
+              <div class="best-product-info">
+
+                <h5>Camisa marfil</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$65.00</strong>
+                </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-9" data-name="Camisa marfil"
+                  data-price="65">
+
+                  Agregar al carrito
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- PRODUCTO 4 -->
+          <div class="swiper-slide">
+
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-4.jpg" alt="Suéter tejido">
+              </a>
+
+              <div class="best-product-info">
+
+                <h5>Suéter tejido</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$50.00</strong>
+                </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-10" data-name="Suéter tejido"
+                  data-price="50">
+
+                  Agregar al carrito
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+
+          <!-- PRODUCTO 5 -->
+          <div class="swiper-slide">
+
+            <article class="best-product-card">
+
+              <a href="pages/catalogo.html" class="best-product-photo">
+                <img src="images/product-item-10.jpg" alt="Suéter de colección">
+              </a>
+
+              <div class="best-product-info">
+
+                <h5>Suéter de colección</h5>
+
+                <div class="best-price-box">
+                  <span>Precio</span>
+                  <strong>$70.00</strong>
+                </div>
+
+                <button type="button" class="best-add-cart" data-id="producto-11" data-name="Suéter de colección"
+                  data-price="70">
+
+                  Agregar al carrito
+
+                </button>
+
+              </div>
+
+            </article>
+
+          </div>
+
+        </div>
+
+        <div class="swiper-pagination"></div>
+
+      </div>
+
+
+      <!-- FLECHA IZQUIERDA -->
+      <button type="button" class="icon-arrow icon-arrow-left" aria-label="Producto anterior">
+
+        <svg width="35" height="35" viewBox="0 0 24 24">
+          <use xlink:href="#arrow-left"></use>
+        </svg>
+
+      </button>
+
+
+      <!-- FLECHA DERECHA -->
+      <button type="button" class="icon-arrow icon-arrow-right" aria-label="Siguiente producto">
+
+        <svg width="35" height="35" viewBox="0 0 24 24">
+          <use xlink:href="#arrow-right"></use>
+        </svg>
+
+      </button>
+
+    </div>
+
+  </section>
+
+
+  <section class="categorias-populares">
     <div class="container-fluid">
-      <div class="row">
-        <div class="video-content open-up" data-aos="zoom-out">
-          <div class="video-bg">
-            <img src="images/video-image.jpg" alt="video" class="video-image img-fluid">
-          </div>
-          <div class="video-player">
-            <a class="youtube" href="https://www.youtube.com/embed/pjtsGzQjFM4">
-              <svg width="24" height="24" viewBox="0 0 24 24">
-                <use xlink:href="#play"></use>
-              </svg>
-              <img src="images/text-pattern.png" alt="pattern" class="text-rotate">
-            </a>
-          </div>
-        </div>
+
+      <h2 class="categorias-populares-titulo">Categorías Populares</h2>
+
+      <div class="categorias-populares-grid">
+
+        <!-- CARD 1 -->
+        <a href="pages/essentials.html" class="categoria-popular-card">
+          <img src="images/categorias/essentials.jpg" alt="Essentials">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Essentials</h3>
+        </a>
+
+        <!-- CARD 2 -->
+        <a href="pages/body.html" class="categoria-popular-card">
+          <img src="images/categorias/body.jpg" alt="Body">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Body</h3>
+        </a>
+
+        <!-- CARD 3 -->
+        <a href="pages/jumper.html" class="categoria-popular-card">
+          <img src="images/categorias/jumper.jpg" alt="Jumper">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Jumper</h3>
+        </a>
+
+        <!-- CARD 4 -->
+        <a href="pages/dresses.html" class="categoria-popular-card">
+          <img src="images/categorias/dresses.jpg" alt="Dresses">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Dresses</h3>
+        </a>
+
+        <!-- CARD 5 -->
+        <a href="pages/top.html" class="categoria-popular-card">
+          <img src="images/categorias/top.jpg" alt="Top">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Top</h3>
+        </a>
+
+        <!-- CARD 6 -->
+        <a href="pages/sets.html" class="categoria-popular-card">
+          <img src="images/categorias/sets.jpg" alt="Sets">
+          <div class="categoria-popular-overlay"></div>
+          <h3>Sets</h3>
+        </a>
+
       </div>
     </div>
   </section>
 
-  <section class="testimonials py-5 bg-light">
-    <div class="section-header text-center mt-5">
-      <h3 class="section-title">WE LOVE GOOD COMPLIMENT</h3>
-    </div>
-    <div class="swiper testimonial-swiper overflow-hidden my-5">
-      <div class="swiper-wrapper d-flex">
-        <div class="swiper-slide">
-          <div class="testimonial-item text-center">
-            <blockquote>
-              <p>“More than expected crazy soft, flexible and best fitted white simple denim shirt.”</p>
-              <div class="review-title text-uppercase">casual way</div>
-            </blockquote>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="testimonial-item text-center">
-            <blockquote>
-              <p>“Best fitted white denim shirt more than expected crazy soft, flexible</p>
-              <div class="review-title text-uppercase">uptop</div>
-            </blockquote>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="testimonial-item text-center">
-            <blockquote>
-              <p>“Best fitted white denim shirt more white denim than expected flexible crazy soft.”</p>
-              <div class="review-title text-uppercase">Denim craze</div>
-            </blockquote>
-          </div>
-        </div>
-        <div class="swiper-slide">
-          <div class="testimonial-item text-center">
-            <blockquote>
-              <p>“Best fitted white denim shirt more than expected crazy soft, flexible</p>
-              <div class="review-title text-uppercase">uptop</div>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="testimonial-swiper-pagination d-flex justify-content-center mb-5"></div>
-  </section>
 
-  <section id="related-products" class="related-products product-carousel py-5 position-relative overflow-hidden">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">You May Also Like</h4>
-        <a href="index.html" class="btn-link">View All Products</a>
-      </div>
-      <div class="swiper product-swiper open-up" data-aos="zoom-out">
-        <div class="swiper-wrapper d-flex">
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-5.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Dark florish onepiece</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$95.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-6.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Baggy Shirt</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$55.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-7.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Cotton off-white shirt</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$65.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-8.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Handmade crop sweater</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$50.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="product-item image-zoom-effect link-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/product-item-1.jpg" alt="product" class="product-image img-fluid">
-                </a>
-                <a href="index.html" class="btn-icon btn-wishlist">
-                  <svg width="24" height="24" viewBox="0 0 24 24">
-                    <use xlink:href="#heart"></use>
-                  </svg>
-                </a>
-                <div class="product-content">
-                  <h5 class="text-uppercase fs-5 mt-3">
-                    <a href="index.html">Handmade crop sweater</a>
-                  </h5>
-                  <a href="index.html" class="text-decoration-none" data-after="Add to cart"><span>$70.00</span></a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="swiper-pagination"></div>
-      </div>
-      <div class="icon-arrow icon-arrow-left"><svg width="50" height="50" viewBox="0 0 24 24">
-          <use xlink:href="#arrow-left"></use>
-        </svg></div>
-      <div class="icon-arrow icon-arrow-right"><svg width="50" height="50" viewBox="0 0 24 24">
-          <use xlink:href="#arrow-right"></use>
-        </svg></div>
-    </div>
-  </section>
 
-  <section class="blog py-5">
-    <div class="container">
-      <div class="d-flex flex-wrap justify-content-between align-items-center mt-5 mb-3">
-        <h4 class="text-uppercase">Read Blog Posts</h4>
-        <a href="index.html" class="btn-link">View All</a>
-      </div>
-      <div class="row">
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image1.jpg" alt="image" style="max-width: 500px; height: auto;" class="post-grid-image img-fluid">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day"> jul 11, 2022</span>
-              </div>
-              <h5 class="post-title text-uppercase">
-                <a href="index.html">How to look outstanding in pastel</a>
-              </h5>
-              <p>Dignissim lacus,turpis ut suspendisse vel tellus.Turpis purus,gravida orci,fringilla...</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image2.jpg" alt="image" class="post-grid-image img-fluid">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day"> jul 11, 2022</span>
-              </div>
-              <h5 class="post-title text-uppercase">
-                <a href="index.html">Top 10 fashion trend for summer</a>
-              </h5>
-              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
-            </div>
-          </article>
-        </div>
-        <div class="col-md-4">
-          <article class="post-item">
-            <div class="post-image">
-              <a href="index.html">
-                <img src="images/post-image3.jpg" alt="image" class="post-grid-image img-fluid">
-              </a>
-            </div>
-            <div class="post-content d-flex flex-wrap gap-2 my-3">
-              <div class="post-meta text-uppercase fs-6 text-secondary">
-                <span class="post-category">Fashion /</span>
-                <span class="meta-day"> jul 11, 2022</span>
-              </div>
-              <h5 class="post-title text-uppercase">
-                <a href="index.html">Crazy fashion with unique moment</a>
-              </h5>
-              <p>Turpis purus, gravida orci, fringilla dignissim lacus, turpis ut suspendisse vel tellus...</p>
-            </div>
-          </article>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <section class="logo-bar py-5 my-5">
-    <div class="container">
-      <div class="row">
-        <div class="logo-content d-flex flex-wrap justify-content-between">
-          <img src="images/logo_famara.png" alt="logo" style="max-width: 150px; height: auto;">
-          <img src="images/logo2.png" alt="logo" class="logo-image img-fluid">
-          <img src="images/logo3.png" alt="logo" class="logo-image img-fluid">
-          <img src="images/logo4.png" alt="logo" class="logo-image img-fluid">
-          <img src="images/logo5.png" alt="logo" class="logo-image img-fluid">
-        </div>
-      </div>
-    </div>
-  </section>
+
 
   <section class="newsletter bg-light" style="background: url(images/pattern-bg.png) no-repeat;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 py-5 my-5">
           <div class="subscribe-header text-center pb-3">
-            <h3 class="section-title text-uppercase">Sign Up for our newsletter</h3>
+            <h3 class="section-title text-uppercase">Suscribete para recibir ofertas excelentes</h3>
           </div>
           <form id="form" class="d-flex flex-wrap gap-2">
             <input type="text" name="email" placeholder="Your Email Addresss" class="form-control form-control-lg">
@@ -1218,47 +992,48 @@
 
   <section class="instagram position-relative">
     <div class="d-flex justify-content-center w-100 position-absolute bottom-0 z-1">
-      <a href="https://www.instagram.com/templatesjungle/" class="btn btn-dark px-5">Follow us on Instagram</a>
+      <a href="https://www.instagram.com/famara.ec_?stkn=eTA5N3lkZGkwNmdz" class="btn btn-dark px-5">Siguenos en
+        Instagram y Tik Tok</a>
     </div>
     <div class="row g-0">
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.instagram.com/famara.ec_?stkn=eTA5N3lkZGkwNmdz" target="_blank">
             <img src="images/insta-item1.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
             <img src="images/insta-item2.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
             <img src="images/insta-item3.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
             <img src="images/insta-item4.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
             <img src="images/insta-item5.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
-          <a href="https://www.instagram.com/templatesjungle/" target="_blank">
+          <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
             <img src="images/insta-item6.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
@@ -1273,10 +1048,10 @@
           <div class="footer-menu footer-menu-001">
             <div class="footer-intro mb-4">
               <a href="index.html">
-                <img src="images/logo_famara.png" alt="logo" style="max-width: 150px; height: auto;">
+                <img src="images/famara-logo.png" alt="FAMARA" class="logo-footer">
               </a>
             </div>
-            <p>FAMARA.</p>
+            <p></p>
             <div class="social-links">
               <ul class="list-unstyled d-flex flex-wrap gap-3">
                 <li>
@@ -1326,16 +1101,14 @@
                 <a href="index.html" class="item-anchor">Home</a>
               </li>
               <li class="menu-item">
-                <a href="index.html" class="item-anchor">About</a>
+                <a href="index.html" class="item-anchor">Nosotros</a>
               </li>
               <li class="menu-item">
-                <a href="blog.html" class="item-anchor">Services</a>
+                <a href="blog.html" class="item-anchor">Productos</a>
               </li>
+              
               <li class="menu-item">
-                <a href="styles.html" class="item-anchor">Single item</a>
-              </li>
-              <li class="menu-item">
-                <a href="#" class="item-anchor">Contact</a>
+                <a href="#" class="item-anchor">Contacto</a>
               </li>
             </ul>
           </div>
@@ -1345,33 +1118,30 @@
             <h5 class="widget-title text-uppercase mb-4">Help & Info</h5>
             <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
               <li class="menu-item">
-                <a href="#" class="item-anchor">Chequea tu pedido</a>
+                <a href="#" class="item-anchor">Revisa tu orden</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="item-anchor">Retornos</a>
+                <a href="#" class="item-anchor">Cambios & Devoluciones</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="item-anchor">Envios</a>
+                <a href="#" class="item-anchor">Envíos</a>
               </li>
               <li class="menu-item">
-                <a href="#" class="item-anchor">Contactanos</a>
+                <a href="#" class="item-anchor">Unete al equipo</a>
               </li>
+
               <li class="menu-item">
-                <a href="#" class="item-anchor">Encuentranos</a>
-              </li>
-              <li class="menu-item">
-                <a href="index.html" class="item-anchor">Faqs</a>
+                <a href="index.html" class="item-anchor">FAQs</a>
               </li>
             </ul>
           </div>
         </div>
         <div class="col-md-3 col-sm-6">
           <div class="footer-menu footer-menu-004 border-animation-left">
-            <h5 class="widget-title text-uppercase mb-4">Contactanos</h5>
+            <h5 class="widget-title text-uppercase mb-4">Contact Us</h5>
             <p>Do you have any questions or suggestions? <a href="mailto:contact@yourcompany.com"
-                class="item-anchor">rrhh@famara.com</a></p>
-            <p>Soporte? Llamanos. <a href="tel:+593 989575912" class="item-anchor">+43 720 11 52
-                78</a>
+                class="item-anchor">rrh@famara.com</a></p>
+            <p>¿Necesitas soporte? Llamanos!. <a href="tel:" class="item-anchor">+593 98 957 5912
             </p>
           </div>
         </div>
@@ -1394,9 +1164,8 @@
             </div>
           </div>
           <div class="col-md-6 text-end">
-            <p>© Copyright 2022 FAMARA. All rights reserved. Design by <a href="https://templatesjungle.com"
-                target="_blank">TemplatesJungle</a> Distribution By <a href="https://themewagon.com"
-              target="blank">ThemeWagon</a></p>
+            <p>© Copyright 2026 Famara. Todos los derechos pertenecen al mismo. Diseñado por <a
+                href="https://templatesjungle.com" target="blank">Luigi Miranda</a></p>
           </div>
         </div>
       </div>
@@ -1410,6 +1179,7 @@
     crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
   <script src="js/script.min.js"></script>
+  <script src="js/news-carousel.js"></script>
 </body>
 
 </html>
