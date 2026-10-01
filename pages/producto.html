@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del producto | FAMARA</title>
+
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="../style.css">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600&family=Marcellus&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header class="ficha-header">
+
+        <a href="../index.html">
+            <img
+                src="../images/famara-logo.png"
+                alt="FAMARA"
+                class="logo-header">
+        </a>
+
+        <a href="catalogo.html">
+            Volver al catálogo
+        </a>
+
+    </header>
+
+
+    <!-- FICHA DEL PRODUCTO -->
+
+    <main class="ficha-producto">
+
+        <div class="ficha-imagen">
+
+            <img
+                id="detalle-imagen"
+                src=""
+                alt="">
+
+        </div>
+
+
+        <div class="ficha-informacion">
+
+            <p class="ficha-etiqueta">
+                FAMARA / COLECCIÓN
+            </p>
+
+            <h1 id="detalle-nombre"></h1>
+
+            <p
+                id="detalle-precio"
+                class="ficha-precio">
+            </p>
+
+            <hr>
+
+            <h3>Descripción</h3>
+
+            <p id="detalle-descripcion"></p>
+
+            <p>
+                <strong>Color:</strong>
+                <span id="detalle-color"></span>
+            </p>
+
+
+            <!-- SELECCIÓN DE TALLA -->
+
+            <div id="detalle-tallas-contenedor">
+
+                <label for="detalle-talla">
+                    Selecciona tu talla
+                </label>
+
+                <select id="detalle-talla">
+
+                    <option value="">
+                        Elige una talla
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- BOTÓN: SOLO EN ESTA PÁGINA -->
+
+            <button
+                type="button"
+                id="detalle-agregar">
+
+                Agregar al carrito
+
+            </button>
+
+
+            <!-- CONFIRMACIÓN SIN ABRIR PANEL LATERAL -->
+
+            <p
+                id="detalle-mensaje"
+                role="status"
+                aria-live="polite">
+            </p>
+
+        </div>
+
+    </main>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="../js/productos.js"></script>
+    <script src="../js/producto-detalle.js"></script>
+
+</body>
+</html>

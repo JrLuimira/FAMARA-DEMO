@@ -59,179 +59,40 @@ body {
   --bs-link-hover-color-rgb: 17, 17, 17;
 }
 
-/* Encabezado: logo a la izquierda, enlaces a la derecha. */
-.famara-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 24px;
-  padding: 1px clamp(16px, 4vw, 64px);
-  background: #fff;
-  border-bottom: 1px solid #e9e5e2;
+/* ====================================
+   ENLACE MAYORISTA DEL HEADER
+   ==================================== */
+
+.mayorista-link {
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+
+    color: #222222;
+
+    padding: 12px 60px;
+
+    text-align: right;
+
+    transition: all 0.3s ease;
 }
 
-.famara-brand { display: block; flex-shrink: 0; }
+/* Cuando el mouse pasa encima */
 
-.famara-header-links {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: 8px clamp(12px, 2vw, 32px);
-  margin-left: auto;
+.mayorista-link:hover {
+    color: #ffffff;
+    background-color: #3b3737;
 }
 
-.famara-header-links a {
-  display: inline-flex;
-  align-items: center;
-  gap: 5px;
-  min-height: 44px;
-  color: #222;
-  font-size: 16px;
-  font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
+/* Cuando se presiona */
 
+.mayorista-link:active {
+    background-color: #777777;
 }
+/* ====================================
+   FIN DEL HEADER MAYORISTA
+   ==================================== */
 
-
-
-.famara-header-links a:hover { color: #800000; }
-.famara-header-links .famara-favoritos { font-size: 20px; }
-
-.famara-header a:focus-visible,
-.famara-hero-nav a:focus-visible {
-  outline: 10px solid currentColor;
-  outline-offset: 4px;
-}
-
-/* La imagen ocupa el ancho de pantalla; el menú queda encima. */
-.famara-hero { position: relative; isolation: isolate; }
-
-.famara-hero .news-carousel {
-  height: clamp(380px, 68vh, 760px);
-}
-
-.famara-hero-nav {
-  position: absolute;
-  z-index: 11;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: transparent;
-  border-bottom: 0px solid transparent;
-}
-
-.famara-hero-nav ul {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0;
-  list-style: none;
-}
-
-.famara-hero-nav li + li { border-left: 0px solid rgba(255, 255, 255, 0.25); }
-
-.famara-hero-nav a {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 20px;
-  padding: 8px 8px;
-  color: #faf7f8;
-  font-size: clamp(16px, 2vw, 26px);
-  font-weight: 300;
-  text-align: center;
-  text-decoration: none;
-}
-
-.famara-hero-nav a:hover { background:transparent; }
-#product, #afiliate { scroll-margin-top: 24px; }
-
-@media (max-width: 600px) {
-  .famara-header { gap: 12px; padding: 12px 16px; }
-  .famara-header .logo-header { width: 92px; }
-  .famara-header-links { gap: 0 12px; }
-  .famara-header-links a { font-size: 14px; }
-  .famara-header-links .famara-favoritos { font-size: 21px; }
-  .famara-hero-nav a { min-height: 60px; font-size: 14px; padding: 12px 4px; }
-  .famara-hero .news-carousel { height: 480px; }
-}
-
-
-/* PORTADA GRANDE: imagen o video */
-/* CONTENEDOR: cada bloque ocupa su propia fila */
-.famara-hero {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    height: auto;
-    overflow: visible;
-}
-/* MENÚ: participa en el flujo normal */
-.famara-hero-nav {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 11;
-
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(5px);
-    -webkit-backdrop-filter: blur(4px);
-
-    border-bottom: 1px solid rgba(255, 255, 255, 0.25);
-}
-
-/* PORTADA: su altura no afecta a los otros bloques */
-.famara-portada {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  background: transparent;
-}
-
-.famara-portada .portada-media {
-  position: static;
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-}
-
-/* BANNER: debajo de la portada */
-.famara-hero > .famara-marquee {
-  position: relative;
-  inset: auto;
-  width: 100%;
-  margin: 0;
-  flex-shrink: 0;
-}
-
-/* CARRUSEL: debajo del banner */
-.famara-hero > .news-carousel {
-  position: relative;
-  width: 100%;
-  height: 600px;
-  margin: 0;
-  flex-shrink: 0;
-  overflow: hidden;
-}
-
-@media (max-width: 600px) {
-  .famara-portada {
-    height: 60vh;
-  }
-
-  .famara-hero > .news-carousel {
-    height: 420px;
-  }
-}
-
-/* Navegación secundaria compartida por las páginas interiores. */
 .secondary-navbar {
   width: 100%;
   margin-top: 35px;
@@ -252,6 +113,11 @@ body {
   flex: 1;
   text-align: center;
   padding: 10px 0;
+  border-right: 0px solid #999;
+}
+
+.secondary-navbar li:last-child {
+  border-right: none;
 }
 
 .secondary-navbar a {
@@ -297,8 +163,7 @@ body {
   color: #fff;
 }
 
-.news-slide img,
-.news-slide video {
+.news-slide img {
   display: block;
   width: 100%;
   height: 100%;
@@ -390,18 +255,19 @@ body {
 }
 
 
+
 /* IMÁGENES */
 
-.product .product-imgs {
+.product .product-imgs {/*.best-sellers .best-product*/
     display: block;
     text-align: center;
     text-decoration: none;
     color: #D9BEFA;
 }
 
-.product .product-imgs img {
+.product .product-imgs img {/*.best-sellers .best-product img*/
     width: 100%;
-    height: 100px;
+    height: 350px;
 
     object-fit: cover;
 
@@ -415,14 +281,14 @@ body {
 
 /* EFECTO SOBRE LAS IMÁGENES */
 
-.product .product-imgs:hover img {
+.product .product-imgs:hover img {/*.best-sellers .best-product:hover img*/
     filter: brightness(0.85);
 }
 
 
 /* TÍTULOS */
 
-.product .product-imgs h5 {
+.product .product-imgs h5 {/*.best-sellers .best-product h5*/
     margin-top: 18px;
     font-size: 20px;
     font-weight: 500;
@@ -433,7 +299,7 @@ body {
    FLECHAS LATERALES
    ========================================= */
 
-.product .icon-arrow {
+.product .icon-arrow {/*.best-sellers .icon-arrow*/
 
     position: absolute;
 
@@ -474,19 +340,19 @@ body {
 
 /* POSICIONES */
 
-.product .icon-arrow-left {
+.product .icon-arrow-left {/*.best-sellers .icon-arrow-left*/
     left: 0;
 }
 
-.product .icon-arrow-right {
+.product .icon-arrow-right {/*.best-sellers .icon-arrow-right*/
     right: 0;
 }
 
 
 /* APARECEN CUANDO EL MOUSE ENTRA */
 
-.product:hover .icon-arrow, 
-.product:focus-within .icon-arrow {
+.product:hover .icon-arrow, /*best-sellers:hover .icon-arrow,*/
+.product:focus-within .icon-arrow {/*.best-sellers:focus-within .icon-arrow*/
 
     opacity: 1;
 
@@ -499,7 +365,7 @@ body {
 
 /* EFECTO SOBRE LAS FLECHAS */
 
-.product .icon-arrow:hover {
+.product .icon-arrow:hover {/*.best-sellers .icon-arrow:hover*/
 
     background: #222;
 
@@ -512,7 +378,7 @@ body {
 
 /* OCULTAR LOS PUNTOS INFERIORES */
 
-.product .swiper-pagination {
+.product .swiper-pagination {/*.best-sellers .swiper-pagination*/
     display: none;
 }
 
@@ -523,19 +389,19 @@ body {
 
 @media (max-width: 991px) {
 
-    .product .icon-arrow {
+    .product .icon-arrow {/*.best-sellers .icon-arrow*/
         display: flex;
 
         width: 42px;
         height: 42px;
     }
 
-    .product .icon-arrow svg {
+    .product .icon-arrow svg {/*.best-sellers .icon-arrow svg*/
         width: 25px;
         height: 25px;
     }
 
-    .product .product img {
+    .product .product img {/*.best-sellers .best-product img*/
         height: 250px;
     }
 
@@ -562,65 +428,64 @@ body {
    TARJETAS PRODUCTOS
    ====================================== */
 
-.product .product-card { 
-    background: transparent;
-    border: 0px solid #D9BEFA;
+.product .product-card { /*.best-sellers .best-product-card*/
+    background: #D9BEFA;
+    border: 1px solid #D9BEFA;
     height: 100%;
     overflow: hidden;
 }
 
 /* Imagen */
 
-.product .product-photo {
+.product .product-photo { /*.best-sellers .best-product-photo*/
     display: block;
-    width: 100%;
-    height: 450px; /* Altura que tú determines */
     overflow: hidden;
 }
-.product .product-photo img {
+
+.product .product-photo img { /*.best-sellers .best-product-photo img*/
     width: 100%;
-    height: 100%;
-    
-    object-position: center;
+    height: 350px;
+    object-fit: cover;
     display: block;
+
     transition: filter 0.4s ease;
 }
 
-.product .product-photo:hover img {
+.product .product-photo:hover img {/*.best-sellers .best-product-photo:hover img */
     filter: brightness(0.85);
 }
 
 /* Información */
 
-.product .product-info {
+.product .product-info {/*.best-sellers .best-product-info*/
     padding: 20px;
     text-align: left;
 }
 
-.product .product-info h5 {
+.product .product-info h5 {/*.best-sellers .best-product-info h5*/
     font-size: 16px;
     margin: 0 0 5px;
-    color: #050505;
+    color: #ffffff;
     min-height: auto;
 }
 
 /* CUADRO DEL PRECIO */
 
-.product .product-price-box {
+.product .product-price-box {/*.best-sellers .best-price-box*/
     display: flex;
     justify-content: left;
     align-items: left;
 
     padding: 5px 10px;
 
-    background: #fbf9ffef;
+    background: #D9BEFA;
     border: none solid #ffffff;
 
     margin-bottom: 1px;
 }
 
 
-.product .product-price-box-strong {
+.product .product-price-box-strong {/*.best-sellers .best-price-box strong*/
     font-size: 14px;
     color: #222;
     font-weight: 400;
@@ -629,7 +494,7 @@ body {
 
 /* BOTÓN AGREGAR AL CARRITO */
 
-.product .product-add-cart {
+.product .product-add-cart {/*.best-sellers .best-add-cart*/
     width: 100%;
     padding: 15px 10px;
 
@@ -649,12 +514,12 @@ body {
         color 0.3s ease;
 }
 
-.product .product-add-cart:hover {
+.product .product-add-cart:hover {/*.best-sellers .best-add-cart:hover*/
     background: #ffffff;
     color: #222;
 }
 
-.product .product-add-cart:active {
+.product .product-add-cart:active {/*.best-sellers .best-add-cart:active*/
     background: #ffffff;
     color: white;
 }
@@ -663,19 +528,19 @@ body {
 
 @media (max-width: 767px) {
 
-    .product .product-photo {
+    .product .product-photo img {/*best-sellers .best-product-photo img*/
         height: 250px;
     }
 
-    .product .product-info {
+    .product .product-info {/*.best-sellers .best-product-info*/
         padding: 12px;
     }
 
-    .product .product-price-box {
+    .product .product-price-box {/*.best-sellers .best-price-box*/
         padding: 10px;
     }
 
-    .product .product-price-box strong {
+    .product .product-price-box strong {/*.best-sellers .best-price-box strong*/
         font-size: 18px;
     }
 
@@ -730,11 +595,11 @@ body {
 .famara-marquee {
     width: 100%;
 
-    background: #686666;
+    background: #383838;
 
     overflow: hidden;
 
-    padding: 5px 0;
+    padding: 25px 0;
 
     position: relative;
 }
@@ -779,7 +644,7 @@ body {
 
     text-decoration: none;
 
-    font-size: 25px;
+    font-size: 35px;
 
     font-weight: 400;
 
@@ -805,7 +670,7 @@ body {
 /* EFECTO AL PASAR EL MOUSE */
 
 .famara-marquee-link:hover {
-    color: #800000;
+    color: #d5b9a3;
 }
 
 
@@ -1325,8 +1190,6 @@ a {
 .swipe-up {
   clip-path: inset(0 0 100% 0);
   display: block;
-  --delay: 0.05s;
-  animation-delay: 1s;
 }
 
 .aos-animate .swipe-up {
@@ -1386,11 +1249,17 @@ a {
   0% { clip-path: inset(0); }
   100% { clip-path: inset(100% 0 0 0); }
 }*/
+.swipe-up {
+  --delay: 0.05s;
+}
+
+.swipe-up {
+  animation-delay: 1s;
+  /* animation-delay: data(swipe-delay); */
+}
 
 /* Text Effects */
 .txt-fx {
-  --delay: 50ms;
-  --easing: cubic-bezier(.5, 0, .53, 1);
   overflow: hidden;
   line-height: 1;
 }
@@ -1412,6 +1281,10 @@ a {
   line-height: 1em;
 }
 
+.txt-fx {
+  --delay: 50ms;
+  --easing: cubic-bezier(.5, 0, .53, 1);
+}
 
 /* fade right */
 .txt-fx.fade-right .letter {
@@ -1733,8 +1606,8 @@ a {
   font-size: 2em;
   color: var(--dark-color);
   z-index: 8;
-  width: 90px;
-  height: 90px;
+  width: 130px;
+  height: 130px;
   border-radius: 50%;
   border: 1px solid #d9d9d9;
   display: flex;
@@ -1808,6 +1681,11 @@ a {
 
 /** Swiper Slide Arrows with background 3
 --------------------------------------------------------------*/
+.icon-arrow {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
 
 /*--- Image hover Effects
 -----------------------------------------------*/
@@ -1944,6 +1822,10 @@ a {
 --------------------------------------------------------------*/
 .video .video-content {
   position: relative;
+}
+
+.video .video-player {
+  position: absolute;
 }
 
 .video .video-player {
