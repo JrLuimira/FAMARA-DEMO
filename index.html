@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <title>FAMARA</title>
@@ -22,11 +22,11 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Marcellus&display=swap"
     rel="stylesheet">
+  <script src="js/carrito.js" defer></script>
+  <script src="js/marquee.js" defer></script>
 </head>
 
 
-<script src="js/carrito.js"></script>
-<script src="js/marquee.js"></script>
 
 <body class="homepage">
   <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
@@ -169,31 +169,32 @@
           </svg></button>
       </form>
 
-      <h5 class="cat-list-title">Browse Categories</h5>
+      <h5 class="cat-list-title">Buscar categorias</h5>
 
       <ul class="cat-list">
         <li class="cat-list-item">
-          <a href="#" title="Jackets">Jackets</a>
+          <a href="categorias-paginas/tops.html" title="Tops">Tops y Camisas</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="T-shirts">T-shirts</a>
+          <a href="pages/categorias-paginas/vestidos.html" title="Vestidos">Vestidos y Enterizos</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Handbags">Handbags</a>
+          <a href="pages/categorias-paginas/body.html" title="Bodys">Bodys y Fajas</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Accessories">Accessories</a>
+          <a href="pages/categorias-paginas/jeans.html" title="Jeans">Jeans</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Cosmetics">Cosmetics</a>
+          <a href="pages/categorias-paginas/accesorios.html" title="Accesorios">Accesorios</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Dresses">Dresses</a>
+          <a href="pages/categorias-paginas/pantalones.html" title="Pantalones">Pantalones de tela</a>
         </li>
         <li class="cat-list-item">
-          <a href="#" title="Jumpsuits">Jumpsuits</a>
+          <a href="pages/categorias-paginas/catalogo.html" title="Catalogo">Catalogo</a>
         </li>
       </ul>
+
 
     </div>
   </div>
@@ -243,232 +244,127 @@
     </div>
 
   </div>
-  <nav class="navbar navbar-expand-lg bg-light text-uppercase fs-6 p-3 border-bottom align-items-center">
-    <div class="container-fluid">
-      <div class="row justify-content-between align-items-center w-100">
+  <header class="famara-header">
+    <a class="famara-brand" href="../pages/index.html" aria-label="Famara, inicio">
+      <img src="images/famara-logo.png" alt="FAMARA" class="logo-header">
+    </a>
+    <nav class="famara-header-links" aria-label="Cuenta y compras">
+      <a href="#afiliate">Afíliate</a>
+      <a class="mayorista-link" href="https://tr.ee/8D0OaJ01xH">Mayorista</a>
+      <a href="#offcanvasCart" data-bs-toggle="offcanvas" aria-controls="offcanvasCart">
+        Carrito <span class="cart-count">(0)</span>
+      </a>
+      <!-- Ajusta esta ruta cuando tengas lista tu página de favoritos. -->
+      <!-- <a class="famara-favoritos" href="pages/favoritos.html" aria-label="Mis favoritos">
+        <span aria-hidden="true"></span>
+      </a> -->
+    </nav>
+  </header>
 
-        <!-- <div class="col-auto">
-          <a class="navbar-brand text-white" href="index.html">
-            <img src="images/famara-logo.png" alt="FAMARA" class="logo-header">
+  <section id="billboard" class="famara-hero" aria-label="Promociones Famara">
+    <nav class="famara-hero-nav" aria-label="Navegación principal">
+      <ul>
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="pages/catalogo.html">Categoría</a></li>
+        <li><a href="#offcanvasCart" data-bs-toggle="offcanvas" aria-controls="offcanvasCart">Contactoo</a></li>
+        <li><a href="#product">Más Vendidos</a></li>
+      </ul>
+
+    </nav>
+
+   <div class="famara-portada">
+    <img
+      class="portada-media"
+      src="images/portada.jpg"
+      alt="Nueva colección de Famara"
+      fetchpriority="high"
+    >
+  </div>
+
+
+    <!-- BANNER HORIZONTAL DESLIZANTE -->
+
+    <!-- BANNER DESLIZANTE -->
+
+    <div class="famara-marquee">
+
+      <div class="famara-marquee-track">
+
+        <div class="famara-marquee-group">
+
+          <!-- FRASE 1 -->
+          <a href="pages/catalogo.html" class="famara-marquee-link">
+            COMPRA AHORA!
           </a>
-        </div> -->
 
-        <div class="col-auto">
-          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
-            aria-controls="offcanvasNavbar">
-            <span class="navbar-toggler-icon"></span>
-          </button>
+          <!-- FRASE 2 -->
+          <a href="pages/novedades.html" class="famara-marquee-link">
+            ENVIOS A TODO EL ECUADOR!
+          </a>
 
-          <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
-            aria-labelledby="offcanvasNavbarLabel">
-            <div class="offcanvas-header">
-              <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
-              <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
-                aria-label="Close"></button>
-            </div>
+          <!-- FRASE 3 -->
 
-            <div class="offcanvas-body">
-              <ul class="navbar-nav justify-content-end flex-grow-1 gap-1 gap-md-5 pe-3">
+          <!-- FRASE 4 -->
+          <a href="pages/interes.html" class="famara-marquee-link">
+            CONOCE NUESTROS BEST SELLERS
+          </a>
 
-                <li class="nav-item">
-                  <a class="nav-link mayorista-link" href="https://tr.ee/8D0OaJ01xH">
-                    ¡Conviértete en mayorista!
-                  </a>
-                </li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-3 col-lg-auto">
-          <ul class="list-unstyled d-flex m-0">
-            <li class="d-none d-lg-block">
-              <a href="index.html" class="text-uppercase mx-3">Wishlist <span class="wishlist-count">(0)</span>
-              </a>
-            </li>
-            <li class="d-none d-lg-block">
-              <a href="index.html" class="text-uppercase mx-3" data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasCart" aria-controls="offcanvasCart">Carrio <span class="cart-count">(0)</span>
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="mx-2">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <use xlink:href="#heart"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="d-lg-none">
-              <a href="#" class="mx-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCart"
-                aria-controls="offcanvasCart">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <use xlink:href="#cart"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="search-box" class="mx-2">
-              <a href="#search" class="search-button">
-                <svg width="24" height="24" viewBox="0 0 24 24">
-                  <use xlink:href="#search"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
         </div>
 
       </div>
 
     </div>
-  </nav>
 
-  <section id="billboard" class="bg-light py-5">
-    <div class="container">
-      <div class="row justify-content-center">
-        <h1 class="section-title text-center mt-4" data-aos="fade-up">F A M A R A</h1>
-        <nav class="secondary-navbar">
-          <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="pages/catalogo.html">Catalogo</a></li>
-            <li><a href="pages/interes.html">Best Seller</a></li>
-          </ul>
-        </nav>
 
-        <!-- Carrusel de noticias: una noticia a la vez -->
-        <div class="news-carousel" data-autoplay-ms="8000" aria-label="Noticias destacadas">
-          <div class="news-track">
-            <a href="noticia1.html" class="news-slide">
-              <img src="imagen1.jpg" alt="Noticia 1">
-              <div class="news-overlay">
-                <h2>Noticia 1</h2>
-                <p>Descripción breve de la noticia.</p>
-              </div>
-            </a>
-            <a href="noticia2.html" class="news-slide">
-              <img src="imagen2.jpg" alt="Noticia 2">
-              <div class="news-overlay">
-                <h2>Noticia 2</h2>
-                <p>Descripción breve de la noticia.</p>
-              </div>
-            </a>
-            <a href="noticia3.html" class="news-slide">
-              <img src="imagen3.jpg" alt="Noticia 3">
-              <div class="news-overlay">
-                <h2>Noticia 3</h2>
-                <p>Descripción breve de la noticia.</p>
-              </div>
-            </a>
+    <!-- Promoción de fondo: cambia imagen1.jpg, imagen2.jpg e imagen3.jpg
+         por tus imágenes. El menú queda superpuesto al carrusel.
+         También puedes sustituir un <img> por:
+         <video controls muted loop playsinline preload="metadata" poster="imagen1.jpg">
+           <source src="videos/promocion.mp4" type="video/mp4">
+         </video>
+         Con video, desactiva el avance automático en js/news-carousel.js.
+    -->
+    <!-- Carrusel de noticias: una noticia a la vez -->
+    <div class="news-carousel" data-autoplay-ms="8000" aria-label="Noticias destacadas">
+      <div class="news-track">
+        <a href="noticia1.html" class="news-slide">
+          <img src="images/post-image1.jpg" alt="Noticia 1">
+          <div class="news-overlay">
+            <h2>Noticia 1</h2>
+            <p>Descripción breve de la noticia.</p>
           </div>
-
-          <!-- Puntos fijos: no forman parte de news-track -->
-          <div class="news-dots" role="group" aria-label="Elegir noticia">
-            <button class="news-dot active" type="button" data-news-index="0" aria-label="Mostrar noticia 1"
-              aria-pressed="true"></button>
-            <button class="news-dot" type="button" data-news-index="1" aria-label="Mostrar noticia 2"
-              aria-pressed="false"></button>
-            <button class="news-dot" type="button" data-news-index="2" aria-label="Mostrar noticia 3"
-              aria-pressed="false"></button>
+        </a>
+        <a href="noticia2.html" class="news-slide">
+          <img src="images/single-image-2.jpg" alt="Noticia 2">
+          <div class="news-overlay">
+            <h2>Noticia 2</h2>
+            <p>Descripción breve de la noticia.</p>
           </div>
-        </div>
+        </a>
+        <a href="noticia3.html" class="news-slide">
+          <img src="images/foto3.jpeg" alt="Noticia 3">
+          <div class="news-overlay">
+            <h2>Noticia 3</h2>
+            <p>Descripción breve de la noticia.</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Puntos fijos: no forman parte de news-track -->
+      <div class="news-dots" role="group" aria-label="Elegir noticia">
+        <button class="news-dot active" type="button" data-news-index="0" aria-label="Mostrar noticia 1"
+          aria-pressed="true"></button>
+        <button class="news-dot" type="button" data-news-index="1" aria-label="Mostrar noticia 2"
+          aria-pressed="false"></button>
+        <button class="news-dot" type="button" data-news-index="2" aria-label="Mostrar noticia 3"
+          aria-pressed="false"></button>
       </div>
     </div>
   </section>
 
-  <!-- <section class="features py-5">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="0">
-          <div class="py-5">
-            <svg width="38" height="38" viewBox="0 0 24 24">
-              <use xlink:href="#calendar"></use>
-            </svg>
-            <h4 class="element-title text-capitalize my-3">Book An Appointment</h4>
-            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="300">
-          <div class="py-5">
-            <svg width="38" height="38" viewBox="0 0 24 24">
-              <use xlink:href="#shopping-bag"></use>
-            </svg>
-            <h4 class="element-title text-capitalize my-3">Pick up in store</h4>
-            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="600">
-          <div class="py-5">
-            <svg width="38" height="38" viewBox="0 0 24 24">
-              <use xlink:href="#gift"></use>
-            </svg>
-            <h4 class="element-title text-capitalize my-3">Special packaging</h4>
-            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-          </div>
-        </div>
-        <div class="col-md-3 text-center" data-aos="fade-in" data-aos-delay="900">
-          <div class="py-5">
-            <svg width="38" height="38" viewBox="0 0 24 24">
-              <use xlink:href="#arrow-cycle"></use>
-            </svg>
-            <h4 class="element-title text-capitalize my-3">free global returns</h4>
-            <p>At imperdiet dui accumsan sit amet nulla risus est ultricies quis.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
-  <!-- <section class="categories overflow-hidden" aria-label="Best Seller">
-    <div class="container">
-      <div class="open-up" data-aos="zoom-out">
-        <div class="row">
-          <div class="col-md-4">
-            <div class="cat-item image-zoom-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/cat-item1.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-              </div>
-              <div class="category-content">
-                <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop for men</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="cat-item image-zoom-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/cat-item2.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-              </div>
-              <div class="category-content">
-                <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop for women</a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="cat-item image-zoom-effect">
-              <div class="image-holder">
-                <a href="index.html">
-                  <img src="images/cat-item3.jpg" alt="categories" class="product-image img-fluid">
-                </a>
-              </div>
-              <div class="category-content">
-                <div class="product-button">
-                  <a href="index.html" class="btn btn-common text-uppercase">Shop accessories</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section> -->
-
-  <section id="best-sellers" class="best-sellers product-carousel py-5 position-relative overflow-hidden">
+ <section id="product"
+         class="product best-sellers product-carousel py-5 position-relative overflow-hidden">
 
     <div class="container">
 
@@ -476,7 +372,7 @@
       <div class="d-flex justify-content-between align-items-center mb-4">
 
         <h4 class="text-uppercase">
-          BEST SELLERS
+          MÁS VENDIDOS
         </h4>
 
         <a href="pages/catalogo.html" class="btn-link">
@@ -492,24 +388,24 @@
 
           <!-- PRODUCTO 1 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-4.jpg" alt="Vestido floral">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto4.jpg" alt="Vestido floral">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Vestido floral</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+
                   <strong>$95.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-1" data-name="Vestido floral"
+                <!-- <button type="button" class="product-add-cart" data-id="producto-1" data-name="Vestido floral"
                   data-price="95">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -517,24 +413,24 @@
 
           <!-- PRODUCTO 2 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-3.jpg" alt="Camisa holgada">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto3.jpeg" alt="Camisa holgada">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Camisa holgada</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$55.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-2" data-name="Camisa holgada"
+                <!-- <button type="button" class="product-add-cart" data-id="producto-2" data-name="Camisa holgada"
                   data-price="55">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -542,24 +438,24 @@
 
           <!-- PRODUCTO 3 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-5.jpg" alt="Camisa marfil">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto3.jpeg" alt="Camisa marfil">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Camisa marfil</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$65.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-3" data-name="Camisa marfil"
+                <!-- <button type="button" class="product-add-cart" data-id="producto-3" data-name="Camisa marfil"
                   data-price="65">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -567,24 +463,24 @@
 
           <!-- PRODUCTO 4 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-6.jpg" alt="Suéter tejido">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto4.jpg" alt="Suéter tejido">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Suéter tejido</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$50.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-4" data-name="Suéter tejido"
+                <!-- <button type="button" class="product-add-cart" data-id="producto-4" data-name="Suéter tejido"
                   data-price="50">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -592,24 +488,24 @@
 
           <!-- PRODUCTO 5 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-9.jpg" alt="Vestido floral 2">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto1.jpg" alt="Vestido floral 2">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Vestido floral 2</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$70.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-5" data-name="Vestido floral 2"
+                <!-- <button type="button" class="product-add-cart" data-id="producto-5" data-name="Vestido floral 2"
                   data-price="70">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -617,24 +513,24 @@
 
           <!-- PRODUCTO 6 -->
           <div class="swiper-slide">
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-10.jpg" alt="Camisa marfil 2">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto2.jpg" alt="Camisa marfil 2">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
                 <h5>Camisa marfil 2</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$70.00</strong>
                 </div>
-
-                <button type="button" class="best-add-cart" data-id="producto-6" data-name="Camisa marfil 2"
+                <!-- 
+                <button type="button" class="product-add-cart" data-id="producto-6" data-name="Camisa marfil 2"
                   data-price="70">
                   Agregar al carrito
-                </button>
+                </button> -->
               </div>
 
             </article>
@@ -668,43 +564,11 @@
 
   </section>
 
-  <!-- BANNER HORIZONTAL DESLIZANTE -->
 
-  <!-- BANNER DESLIZANTE -->
+  
+     <section id="new-arrival"
+         class="product best-sellers product-carousel py-5 position-relative overflow-hidden">
 
-  <div class="famara-marquee">
-
-    <div class="famara-marquee-track">
-
-      <div class="famara-marquee-group">
-
-        <!-- FRASE 1 -->
-        <a href="pages/catalogo.html" class="famara-marquee-link">
-          COMPRA AHORA!
-        </a>
-
-        <!-- FRASE 2 -->
-        <a href="pages/novedades.html" class="famara-marquee-link">
-          ENVIOS A TODO EL ECUADOR!
-        </a>
-
-        <!-- FRASE 3 -->
-        <a href="pages/ofertas.html" class="famara-marquee-link">
-          PRODUCTOS EN OFERTA NO APLICA CAMBIOS
-        </a>
-
-        <!-- FRASE 4 -->
-        <a href="pages/interes.html" class="famara-marquee-link">
-          CONOCE NUESTROS BEST SELLERS
-        </a>
-
-      </div>
-
-    </div>
-
-  </div>
-
-  <section id="new-arrival" class="new-arrival best-sellers product-carousel py-5 position-relative overflow-hidden">
 
     <div class="container">
 
@@ -712,7 +576,7 @@
       <div class="d-flex justify-content-between align-items-center mb-4">
 
         <h4 class="text-uppercase">
-          OUR NEW ARRIVALS
+          RECIEN LLEGADOS
         </h4>
 
         <a href="pages/catalogo.html" class="btn-link">
@@ -729,27 +593,27 @@
           <!-- PRODUCTO 1 -->
           <div class="swiper-slide">
 
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-1.jpg" alt="Vestido floral">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto1.jpg" alt="Vestido floral">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
 
                 <h5>Vestido floral</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$95.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-7" data-name="Vestido floral"
-                  data-price="95">
+                <!-- <button type="button" class="product-add-cart" data-id="producto-7" data-name="Vestido floral"
+                  data-price="95"> -->
 
-                  Agregar al carrito
+                <!-- Agregar al carrito
 
-                </button>
+                </button> -->
 
               </div>
 
@@ -761,27 +625,27 @@
           <!-- PRODUCTO 2 -->
           <div class="swiper-slide">
 
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-2.jpg" alt="Camisa holgada">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto2.jpg" alt="Camisa holgada">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
 
                 <h5>Camisa holgada</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$55.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-8" data-name="Camisa holgada"
-                  data-price="55">
+                <!-- <button type="button" class="product-add-cart" data-id="producto-8" data-name="Camisa holgada"
+                  data-price="55"> -->
 
-                  Agregar al carrito
+                <!-- Agregar al carrito
 
-                </button>
+                </button> -->
 
               </div>
 
@@ -793,27 +657,27 @@
           <!-- PRODUCTO 3 -->
           <div class="swiper-slide">
 
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-3.jpg" alt="Camisa marfil">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto3.jpeg" alt="Camisa marfil">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
 
                 <h5>Camisa marfil</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$65.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-9" data-name="Camisa marfil"
-                  data-price="65">
+                <!-- <button type="button" class="product-add-cart" data-id="producto-9" data-name="Camisa marfil"
+                  data-price="65"> -->
 
-                  Agregar al carrito
+                <!-- Agregar al carrito
 
-                </button>
+                </button> -->
 
               </div>
 
@@ -825,27 +689,27 @@
           <!-- PRODUCTO 4 -->
           <div class="swiper-slide">
 
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-4.jpg" alt="Suéter tejido">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto1.jpg" alt="Suéter tejido">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
 
                 <h5>Suéter tejido</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$50.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-10" data-name="Suéter tejido"
-                  data-price="50">
+                <!-- <button type="button" class="product-add-cart" data-id="producto-10" data-name="Suéter tejido"
+                  data-price="50"> -->
 
-                  Agregar al carrito
+                <!-- Agregar al carrito
 
-                </button>
+                </button> -->
 
               </div>
 
@@ -857,27 +721,27 @@
           <!-- PRODUCTO 5 -->
           <div class="swiper-slide">
 
-            <article class="best-product-card">
+            <article class="product-card">
 
-              <a href="pages/catalogo.html" class="best-product-photo">
-                <img src="images/product-item-10.jpg" alt="Suéter de colección">
+              <a href="pages/catalogo.html" class="product-photo">
+                <img src="images/foto4.jpg" alt="Suéter de colección">
               </a>
 
-              <div class="best-product-info">
+              <div class="product-info">
 
                 <h5>Suéter de colección</h5>
 
-                <div class="best-price-box">
-                  <span>Precio</span>
+                <div class="product-price-box">
+                  <span></span>
                   <strong>$70.00</strong>
                 </div>
 
-                <button type="button" class="best-add-cart" data-id="producto-11" data-name="Suéter de colección"
-                  data-price="70">
+                <!-- <button type="button" class="product-add-cart" data-id="producto-11" data-name="Suéter de colección"
+                  data-price="70"> -->
 
-                  Agregar al carrito
+                <!-- Agregar al carrito
 
-                </button>
+                </button> -->
 
               </div>
 
@@ -925,44 +789,44 @@
 
         <!-- CARD 1 -->
         <a href="pages/essentials.html" class="categoria-popular-card">
-          <img src="images/categorias/essentials.jpg" alt="Essentials">
+          <img src="images/foto1.jpg" alt="Essentials">
           <div class="categoria-popular-overlay"></div>
-          <h3>Essentials</h3>
+          <h3>Fajas</h3>
         </a>
 
         <!-- CARD 2 -->
         <a href="pages/body.html" class="categoria-popular-card">
-          <img src="images/categorias/body.jpg" alt="Body">
+          <img src="images/foto2.jpg" alt="Body">
           <div class="categoria-popular-overlay"></div>
-          <h3>Body</h3>
+          <h3>Tops</h3>
         </a>
 
         <!-- CARD 3 -->
         <a href="pages/jumper.html" class="categoria-popular-card">
-          <img src="images/categorias/jumper.jpg" alt="Jumper">
+          <img src="images/foto3.jpeg" alt="Jumper">
           <div class="categoria-popular-overlay"></div>
-          <h3>Jumper</h3>
+          <h3>Vestidos</h3>
         </a>
 
         <!-- CARD 4 -->
         <a href="pages/dresses.html" class="categoria-popular-card">
-          <img src="images/categorias/dresses.jpg" alt="Dresses">
+          <img src="images/foto4.jpg" alt="Dresses">
           <div class="categoria-popular-overlay"></div>
-          <h3>Dresses</h3>
+          <h3>Jeans</h3>
         </a>
 
         <!-- CARD 5 -->
         <a href="pages/top.html" class="categoria-popular-card">
-          <img src="images/categorias/top.jpg" alt="Top">
+          <img src="images/foto1.jpg" alt="Top">
           <div class="categoria-popular-overlay"></div>
-          <h3>Top</h3>
+          <h3>Pantalones</h3>
         </a>
 
         <!-- CARD 6 -->
         <a href="pages/sets.html" class="categoria-popular-card">
-          <img src="images/categorias/sets.jpg" alt="Sets">
+          <img src="images/foto2.jpg" alt="Sets">
           <div class="categoria-popular-overlay"></div>
-          <h3>Sets</h3>
+          <h3>Bodies</h3>
         </a>
 
       </div>
@@ -974,7 +838,7 @@
 
 
 
-  <section class="newsletter bg-light" style="background: url(images/pattern-bg.png) no-repeat;">
+  <!-- <section id="afiliate" class="newsletter bg-light" style="background: url(images/pattern-bg.png) no-repeat;">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-md-8 py-5 my-5">
@@ -988,7 +852,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <section class="instagram position-relative">
     <div class="d-flex justify-content-center w-100 position-absolute bottom-0 z-1">
@@ -999,42 +863,42 @@
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.instagram.com/famara.ec_?stkn=eTA5N3lkZGkwNmdz" target="_blank">
-            <img src="images/insta-item1.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto1.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
-            <img src="images/insta-item2.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto4.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
-            <img src="images/insta-item3.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto3.jpeg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
-            <img src="images/insta-item4.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto4.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
-            <img src="images/insta-item5.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto4.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
       <div class="col-6 col-sm-4 col-md-2">
         <div class="insta-item">
           <a href="https://www.tiktok.com/@famara.ec_" target="_blank">
-            <img src="images/insta-item6.jpg" alt="instagram" class="insta-image img-fluid">
+            <img src="images/foto2.jpg" alt="instagram" class="insta-image img-fluid">
           </a>
         </div>
       </div>
@@ -1101,15 +965,13 @@
                 <a href="index.html" class="item-anchor">Home</a>
               </li>
               <li class="menu-item">
-                <a href="index.html" class="item-anchor">Nosotros</a>
+                <a href="index.html" class="item-anchor">Contacto</a>
               </li>
               <li class="menu-item">
                 <a href="blog.html" class="item-anchor">Productos</a>
               </li>
-              
-              <li class="menu-item">
-                <a href="#" class="item-anchor">Contacto</a>
-              </li>
+
+          
             </ul>
           </div>
         </div>
@@ -1118,33 +980,19 @@
             <h5 class="widget-title text-uppercase mb-4">Help & Info</h5>
             <ul class="menu-list list-unstyled text-uppercase border-animation-left fs-6">
               <li class="menu-item">
-                <a href="#" class="item-anchor">Revisa tu orden</a>
+                <a href="#" class="item-anchor">Preguntas Frecuentes</a>
               </li>
               <li class="menu-item">
                 <a href="#" class="item-anchor">Cambios & Devoluciones</a>
               </li>
-              <li class="menu-item">
-                <a href="#" class="item-anchor">Envíos</a>
-              </li>
+              
               <li class="menu-item">
                 <a href="#" class="item-anchor">Unete al equipo</a>
-              </li>
-
-              <li class="menu-item">
-                <a href="index.html" class="item-anchor">FAQs</a>
               </li>
             </ul>
           </div>
         </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="footer-menu footer-menu-004 border-animation-left">
-            <h5 class="widget-title text-uppercase mb-4">Contact Us</h5>
-            <p>Do you have any questions or suggestions? <a href="mailto:contact@yourcompany.com"
-                class="item-anchor">rrh@famara.com</a></p>
-            <p>¿Necesitas soporte? Llamanos!. <a href="tel:" class="item-anchor">+593 98 957 5912
-            </p>
-          </div>
-        </div>
+       
       </div>
     </div>
     <div class="border-top py-4">
@@ -1152,20 +1000,20 @@
         <div class="row">
           <div class="col-md-6 d-flex flex-wrap">
             <div class="shipping">
-              <span>We ship with:</span>
+              <!-- <span>We ship with:</span>
               <img src="images/arct-icon.png" alt="icon">
-              <img src="images/dhl-logo.png" alt="icon">
+              <img src="images/dhl-logo.png" alt="icon"> -->
             </div>
-            <div class="payment-option">
+            <!-- <div class="payment-option">
               <span>Payment Option:</span>
               <img src="images/visa-card.png" alt="card">
               <img src="images/paypal-card.png" alt="card">
               <img src="images/master-card.png" alt="card">
             </div>
-          </div>
+          </div> -->
           <div class="col-md-6 text-end">
-            <p>© Copyright 2026 Famara. Todos los derechos pertenecen al mismo. Diseñado por <a
-                href="https://templatesjungle.com" target="blank">Luigi Miranda</a></p>
+            <p>© Copyright 2026 Famara. <a
+               target="blank"></a></p>
           </div>
         </div>
       </div>

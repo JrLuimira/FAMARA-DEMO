@@ -19,7 +19,7 @@
     <!-- Fuentes -->
     <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;500;600;700&family=Marcellus&display=swap"
         rel="stylesheet">
-
+    <script src="../../js/enlaces-productos.js" defer></script>
 </head>
 
 
@@ -393,7 +393,7 @@
                     </article>
 
                     <!-- PRODUCTO 4 -->
-                    <article class="product-card" data-nombre="Blusa" data-precio="18.00" data-color="Negro"
+                    <article class="product-card" data-nombre="Jean" data-precio="18.00" data-color="Negro"
                         data-tallas="XS,S,M,L,XL">
 
                         <div class="categoria-galeria" role="group" aria-label="Blusa">
@@ -486,8 +486,11 @@
 
     <script src="../../js/carrito.js"></script>
 
-    <script src="../../js/categorias-filtros/producto-bodies.js?v=20261002"></script>
-    <script src="../../js/categorias-filtros/categoria-producto.js?v=20261002"></script>
+    <!-- Primero carga los datos actualizados -->
+    <script src="../js/categorias-filtros/producto-bodies.js"></script>
+
+    <!-- Después muestra el detalle -->
+    <script src="../js/categorias-filtros/producto-detalle.js"></script>
 
 
 </body>

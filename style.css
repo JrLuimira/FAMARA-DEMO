@@ -2937,7 +2937,7 @@ a.btn-link.text-light:after {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
 
-    gap: 10px 5px;
+    gap: 5px 5px;
 }
 
 .body-producto {
@@ -3186,3 +3186,5 @@ a.btn-link.text-light:after {
     }
 
 }
+
+
